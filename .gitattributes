@@ -1,11 +1,13 @@
 # AUR Package Files
-PKGBUILD linguist-language=shell
-*.install linguist-language=shell
+PKGBUILD            linguist-language=shell
+*.install           linguist-language=shell
+.SRCINFO            linguist-language=ini
 
 # System Files
-*.service linguist-language=ini
-*.desktop linguist-language=desktop
-*.rules linguist-language=shell
+*.service           linguist-language=ini
+*.desktop           linguist-language=desktop
+*.rules             linguist-language=shell
 
 # Documentation
-*.md linguist-documentation
+*.md                linguist-documentation
+LICENSE             linguist-documentation
