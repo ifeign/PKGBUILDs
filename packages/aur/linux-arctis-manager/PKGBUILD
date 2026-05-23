@@ -15,7 +15,7 @@ source=("https://github.com/elegos/$_pkgname/archive/refs/tags/v$pkgver.tar.gz"
         "arctis-manager.service")
 install="linux-arctis-manager.install"
 sha256sums=('7652bf90b2e46963f29593f15b6738a4471d0d95081dc2d6ae051b0c0780ee09'
-            'd4d2d667efdc1e8d719a286d36fc5dcaac798db50374edaba8481ea27055f7c4')
+            '025ae7546d8ffa8f4e2959208dca1254030e1c106a5d955d74b7b49b5cf98767')
 
 build() {
     cd "${_pkgname}-${pkgver}" || return
