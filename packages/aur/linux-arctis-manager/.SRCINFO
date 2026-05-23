@@ -8,7 +8,6 @@ pkgbase = linux-arctis-manager
 	license = GPL-3.0-only
 	makedepends = uv
 	makedepends = python-installer
-	makedepends = git
 	depends = python>=3.10
 	depends = python-pulsectl
 	depends = python-pyudev
