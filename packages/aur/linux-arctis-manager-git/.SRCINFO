@@ -21,6 +21,6 @@ pkgbase = linux-arctis-manager-git
 	source = git+https://github.com/elegos/Linux-Arctis-Manager
 	source = arctis-manager.service
 	sha256sums = SKIP
-	sha256sums = d4d2d667efdc1e8d719a286d36fc5dcaac798db50374edaba8481ea27055f7c4
+	sha256sums = 025ae7546d8ffa8f4e2959208dca1254030e1c106a5d955d74b7b49b5cf98767
 
 pkgname = linux-arctis-manager-git
