@@ -21,4 +21,4 @@ pkgbase = linux-arctis-manager
 	sha256sums = 7652bf90b2e46963f29593f15b6738a4471d0d95081dc2d6ae051b0c0780ee09
 	sha256sums = 3ad9e074ffa85ead9089d4b16f2974d0a9710d7e428cdf61744e6d1cd7b19d6c
 
-pkgname = linux-arctis-manager 
+pkgname = linux-arctis-manager
