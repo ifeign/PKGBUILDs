@@ -15,7 +15,7 @@ provides=("linux-arctis-manager=${pkgver}")
 makedepends=('uv' 'python-installer' 'git')
 source=("git+https://github.com/elegos/$_pkgname"
         "arctis-manager.service")
-install="linux-arctis-manager-git.install"
+install="linux-arctis-manager.install"
 sha256sums=('SKIP'
             '3ad9e074ffa85ead9089d4b16f2974d0a9710d7e428cdf61744e6d1cd7b19d6c')
 
