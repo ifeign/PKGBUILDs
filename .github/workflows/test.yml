@@ -43,10 +43,7 @@ jobs:
         run: |
           for dir in $(find packages -mindepth 2 -maxdepth 2 -type d); do
             if [ -f "$dir/PKGBUILD" ]; then
-              echo "=================================================="
-              echo "🔨 Distro: ${{ matrix.distro.name }} | Package: $dir"
-              echo "=================================================="
-              
+              echo "Processing: $dir"
               namcap "$dir/PKGBUILD"
               
               cd "$dir"
