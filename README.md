@@ -2,7 +2,7 @@
 
 Arch Linux PKGBUILDs that I maintain.
 
-## <img src="https://cdn.simpleicons.org/archlinux/1793D1" width="24" height="24" style="vertical-align:bottom"> [AUR Packages](packages/aur/)
+## <img src="https://cdn.simpleicons.org/archlinux/1793D1" width="24" height="24" style="vertical-align:top"> [AUR Packages](packages/aur/)
 *Maintained and synchronized with the Arch User Repository.*
 
 | Package | Source | AUR | Build |
