@@ -2,7 +2,7 @@
 
 Arch Linux PKGBUILDs that I maintain.
 
-## <img src="https://raw.githubusercontent.com/archlinux/artwork/master/logo/arch-logo.svg" width="20" height="20" style="vertical-align:middle"> [AUR Packages](packages/aur/)
+## <img src="https://github.com/archlinux/artwork/blob/master/logo/arch-logo.svg?raw=true" width="20" height="20" style="vertical-align:middle"> [AUR Packages](packages/aur/)
 *Maintained and synchronized with the Arch User Repository.*
 
 | Package | Source | AUR | Build |
