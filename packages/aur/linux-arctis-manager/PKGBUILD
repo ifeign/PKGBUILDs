@@ -37,7 +37,7 @@ package() {
         "$pkgdir/usr/bin/lam-cli" udev write-rules --rules-path "$pkgdir/usr/lib/udev/rules.d/91-steelseries-arctis.rules"
 
     # Installing assets
-    install -Dm644 src/linux_arctis_manager/icons/arctis-manager.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/arctis-manager.svg"
+    install -Dm644 src/linux_arctis_manager/gui/images/steelseries_logo.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/arctis-manager.svg"
 
     # Installing desktop entries
     install -Dm644 src/linux_arctis_manager/desktop/ArctisManager.desktop "$pkgdir/usr/share/applications/ArctisManager.desktop"
