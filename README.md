@@ -2,7 +2,7 @@
 
 Arch Linux PKGBUILDs that I maintain.
 
-## AUR Packages](packages/aur/)
+## [AUR Packages](packages/aur/)
 *Maintained and synchronized with the Arch User Repository.*
 
 | Package | Source | AUR | Build |
