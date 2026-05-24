@@ -5,6 +5,7 @@ on:
     paths:
       - 'packages/aur/**'
       - 'packages/personal/**'
+  workflow_dispatch:
 
 jobs:
   arch-test:
