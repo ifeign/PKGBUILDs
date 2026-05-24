@@ -4,10 +4,10 @@ Arch Linux PKGBUILDs that I maintain.
 
 ## Package Registry
 
-| Package | Upstream | AUR | Build |
-| :--- | :--- | :--- | :--- |
-| **linux-arctis-manager** | [![Upstream](https://img.shields.io/github/v/release/elegos/Linux-Arctis-Manager?label=&style=flat-square&color=444)](https://github.com/elegos/Linux-Arctis-Manager/releases) | [![AUR](https://img.shields.io/aur/version/linux-arctis-manager?label=&style=flat-square&color=1793D1)](https://aur.archlinux.org/packages/linux-arctis-manager) | [![Status](https://img.shields.io/github/actions/workflow/status/ifeign/PKGBUILDs/test.yml?branch=main&label=&style=flat-square)](https://github.com/ifeign/PKGBUILDs/actions/workflows/test.yml) |
-| **linux-arctis-manager-git** | [![Rolling](https://img.shields.io/badge/rolling-444?style=flat-square)](https://github.com/elegos/Linux-Arctis-Manager/commits/master) | [![AUR](https://img.shields.io/aur/version/linux-arctis-manager-git?label=&style=flat-square&color=1793D1)](https://aur.archlinux.org/packages/linux-arctis-manager-git) | [![Status](https://img.shields.io/github/actions/workflow/status/ifeign/PKGBUILDs/test.yml?branch=main&label=&style=flat-square)](https://github.com/ifeign/PKGBUILDs/actions/workflows/test.yml) |
+| Package | Src | AUR | Build |
+| :--- | :---: | :---: | :---: |
+| **linux-arctis-<br>manager** | [![Src](https://img.shields.io/github/v/release/elegos/Linux-Arctis-Manager?label=&style=flat-square&color=444)](https://github.com/elegos/Linux-Arctis-Manager/releases) | [![AUR](https://img.shields.io/aur/version/linux-arctis-manager?label=&style=flat-square&color=1793D1)](https://aur.archlinux.org/packages/linux-arctis-manager) | [![Status](https://img.shields.io/github/actions/workflow/status/ifeign/PKGBUILDs/test.yml?branch=main&label=&style=flat-square)](https://github.com/ifeign/PKGBUILDs/actions/workflows/test.yml) |
+| **linux-arctis-<br>manager-git** | [![Rolling](https://img.shields.io/badge/rolling-444?style=flat-square)](https://github.com/elegos/Linux-Arctis-Manager/commits/master) | [![AUR](https://img.shields.io/aur/version/linux-arctis-manager-git?label=&style=flat-square&color=1793D1)](https://aur.archlinux.org/packages/linux-arctis-manager-git) | [![Status](https://img.shields.io/github/actions/workflow/status/ifeign/PKGBUILDs/test.yml?branch=main&label=&style=flat-square)](https://github.com/ifeign/PKGBUILDs/actions/workflows/test.yml) |
 
 ## Repository Structure
 
