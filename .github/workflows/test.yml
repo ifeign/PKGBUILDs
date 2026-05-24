@@ -1,0 +1,56 @@
+name: Arch Ecosystem Build Test
+
+on:
+  pull_request:
+    paths:
+      - 'packages/aur/**'
+      - 'packages/personal/**'
+
+jobs:
+  run-matrix-checks:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        distro:
+          - image: "archlinux:base-devel"
+            name: "Arch Linux"
+          - image: "cachyos/cachyos:latest"
+            name: "CachyOS"
+          - image: "manjarolinux/base:latest"
+            name: "Manjaro"
+    
+    container:
+      image: ${{ matrix.distro.image }}
+
+    name: Test on ${{ matrix.distro.name }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sync OS Package Managers
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm namcap pacman-contrib sudo git
+
+      - name: Provision Non-Root Build User
+        run: |
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+          chown -R builder:builder .
+
+      - name: Execute Linting and Compilation Test
+        run: |
+          for dir in $(find packages -mindepth 2 -maxdepth 2 -type d); do
+            if [ -f "$dir/PKGBUILD" ]; then
+              echo "=================================================="
+              echo "🔨 Distro: ${{ matrix.distro.name }} | Package: $dir"
+              echo "=================================================="
+              
+              namcap "$dir/PKGBUILD"
+              
+              cd "$dir"
+              sudo -u builder makepkg --syncdeps --nobuild --noconfirm --asdeps
+              cd - > /dev/null
+            fi
+          done
