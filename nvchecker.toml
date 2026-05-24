@@ -1,0 +1,4 @@
+[linux-arctis-manager]
+source = "github"
+github = "elegos/Linux-Arctis-Manager"
+use_latest_release = true
