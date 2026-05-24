@@ -8,13 +8,12 @@ _r='\e[0m'    # Reset
 
 _check_conflicts() {
     local user_home="$1"
-    local legacy_icon="$user_home/.local/share/icons/arctis-manager.svg"
 
     # Checking for legacy files or configurations that conflict with the current package
     if [ -f "$user_home/.config/systemd/user/arctis-manager.service" ] || \
        [ -f "/etc/udev/rules.d/91-steelseries-arctis.rules" ] || \
        [ -d "$user_home/.config/arctis_manager/devices/" ] || \
-       [ -f "$legacy_icon" ]; then
+       [ -f "$user_home/.local/share/icons/arctis-manager.svg" ]; then
 
         echo -e "${_b}::${_r} ${_y}[ATTENTION]${_r} Configuration conflicts detected:"
         echo -e "${_b}::${_r}"
@@ -48,7 +47,7 @@ _check_conflicts() {
         fi
 
         # 4. Legacy Icon
-        if [ -f "$legacy_icon" ]; then
+        if [ -f "$user_home/.local/share/icons/arctis-manager.svg" ]; then
             echo -e "${_b}::${_r} ${_y}[DEPRECATION]${_r} Conflict: Legacy user-space icon detected."
             echo -e "${_b}::${_r}               Local icons override the package manager's system theme."
             echo -e "${_b}::${_r}               Remove it to ensure your app menu updates correctly:"
@@ -76,13 +75,12 @@ post_upgrade() {
     local user_home
     user_home=$(getent passwd "${SUDO_USER:-$USER}" | cut -d: -f6)
     local autostart="$user_home/.config/autostart/ArctisManagerSystray.desktop"
-    local legacy_icon="$user_home/.local/share/icons/arctis-manager.svg"
 
     # Evaluate if legacy configurations or pending maintenance require user notification
     if [ -f "$user_home/.config/systemd/user/arctis-manager.service" ] || \
        [ -f "/etc/udev/rules.d/91-steelseries-arctis.rules" ] || \
        [ -d "$user_home/.config/arctis_manager/devices/" ] || \
-       [ -f "$legacy_icon" ] || \
+       [ -f "$user_home/.local/share/icons/arctis-manager.svg" ] || \
        { [ -f "$autostart" ] && [ ! -L "$autostart" ]; }; then
 
         echo -e ""
