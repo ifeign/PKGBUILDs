@@ -4,7 +4,7 @@
 pkgname=linux-arctis-manager-git
 _pkgname=Linux-Arctis-Manager
 pkgver=r1.e838443
-pkgrel=1
+pkgrel=2
 pkgdesc="An open-source replacement for SteelSeries GG, to manage your Arctis headset on Linux!"
 arch=('x86_64')
 url="https://github.com/elegos/Linux-Arctis-Manager"
@@ -42,6 +42,9 @@ package() {
     install -d "$pkgdir/usr/lib/udev/rules.d/"
     PYTHONPATH="$pkgdir/usr/lib/python$_py_ver/site-packages" \
         "$pkgdir/usr/bin/lam-cli" udev write-rules --rules-path "$pkgdir/usr/lib/udev/rules.d/91-steelseries-arctis.rules"
+
+    # Installing assets
+    install -Dm644 src/linux_arctis_manager/gui/images/steelseries_logo.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/arctis-manager.svg"
 
     # Installing desktop entries
     install -Dm644 src/linux_arctis_manager/desktop/ArctisManager.desktop "$pkgdir/usr/share/applications/ArctisManager.desktop"
